@@ -17,6 +17,7 @@ h1 {
 }
 
 form {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +33,15 @@ form {
     border-radius: 5px;
     font-size: 18px;
     color: #333;
+}
+
+.clear-input {
+    position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    right: 915px;
+    display: none;
 }
 
 #search-button {

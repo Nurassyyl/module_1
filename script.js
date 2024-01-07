@@ -4,6 +4,7 @@ const formEl = document.querySelector("form");
 const inputEl = document.getElementById("search-input");
 const searchResults = document.querySelector(".search-results");
 const showMore = document.querySelector("#show-more-button");
+const clearInput = document.querySelector(".clear-input");
 
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -13,6 +14,13 @@ formEl.addEventListener('submit', (e) => {
 
 showMore.addEventListener('click', (e) => {
     searchImages();
+});
+
+clearInput.addEventListener('click', (e) => {
+    inputEl.value = "";
+    clearInput.style.display = "none";
+    searchResults.innerHTML = "";
+    showMore.style.display = "none";
 });
 
 let inputData = "";
@@ -49,5 +57,10 @@ async function searchImages() {
     if (page > 1) {
         showMore.style.display = "block";
     }
+
+    if (inputData.length > 1) {
+        clearInput.style.display = "block";
+    }
+
 
 }
