@@ -116,6 +116,10 @@ form {
     .search-result {
         width: 45%;
     }
+
+    .clear-input {
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -125,5 +129,9 @@ form {
 
     .search-result {
         width: 100%;
+    }
+
+    .clear-input {
+        right: 150px;
     }
 }
